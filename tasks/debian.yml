@@ -28,7 +28,7 @@
     src: "{{ chruby_archive_path }}"
     dest: /tmp
     creates: "{{ chruby_archive_destination_path }}/Makefile"
-    remote_src: no
+    remote_src: yes
   when: chruby_path.stat.exists == false
 
 - name: Run chruby install target
